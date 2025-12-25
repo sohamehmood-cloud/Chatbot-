@@ -280,8 +280,13 @@ def serve_static(filename):
 def chat():
     data = request.get_json() or {}
     user_message = data.get("message", "").strip()
+    
     if not user_message:
-        return jsonify({"answer": "Please provide a message.", "crisis": False}), 400
+        return jsonify({"reply": "Please provide a message.", "crisis": False}), 400
+    
+    # Example simple reply (replace with real logic)
+    return jsonify({"reply": f"You said: {user_message}", "crisis": False})
+
 
     # Crisis detection (highest priority)
     if is_crisis(user_message):
