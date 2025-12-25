@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBuddy — Mental Wellbeing Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="chat-container" role="main">
+        <h1>MindBuddy</h1>
+        <p class="disclaimer">MindBuddy provides supportive information and self-care tips. It is not a substitute for
+            professional care. If you are in crisis, call your local emergency number or a crisis hotline.</p>
+        <div id="chatbox" aria-live="polite"></div>
+
+        <form id="chatForm" onsubmit="event.preventDefault(); sendMessage();">
+            <input type="text" id="userInput" placeholder="How can I help you today?" aria-label="Message"
+                autocomplete="off">
+            <button type="submit">Send</button>
+        </form>
+
+        <div class="resources">
+            <strong>Quick resources:</strong>
+            <ul>
+                <li><a href="https://www.opencounseling.com/suicide-hotlines" target="_blank"
+                        rel="noopener">International crisis hotlines</a></li>
+                <li><a href="https://www.mentalhealth.gov/get-help" target="_blank" rel="noopener">MentalHealth.gov —
+                        Get help</a></li>
+            </ul>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
