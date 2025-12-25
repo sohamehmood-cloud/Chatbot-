@@ -25,7 +25,7 @@ async function sendMessage() {
     chatbox.scrollTop = chatbox.scrollHeight;
 
     try {
-        const res = await fetch(https://chatbot-xz9t.onrender.com, {
+        const res = await fetch("https://chatbot-xz9t.onrender.com", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: input })
